@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aryst&eacute</title>
+		<link rel="stylesheet" type="text/css" href="file:///Users/Jien/Desktop/Recreation/HTML%20Stuff/Style.css">
+		<script src="file:///Users/Jien/Desktop/Recreation/HTML%20Stuff/Interaction.html"></script>
+	</head>
+	
+	<body>
+		<!--Name, both real and created-->
+		<div class = "name">
+			<h1>Aryst&eacute</h1>
+			<div class = "divider">
+				<img src="file:///Users/Jien/Desktop/Recreation/HTML%20Stuff/divider.png">
+			</div>
+		</div>
+			
+		
+		<!--Level-->
+		<div class="level">
+			<h1>Level 13</h1>
+		</div>
+			
+		<!--General info-->
+		<div class = "general">
+			<div class = "info">
+				<p id="Label">Race: </p>
+				<p id="Answer">Fetchling</p>
+			
+				<p id="Label">Class: </p>
+				<p id="Answer">War Soul</p>
+			
+				<p id="Label">Gender: </p>
+				<p id="Answer">Female</p>
+				
+				<p id="Label"> Alignment: </p>
+				<p id="Answer">Chaotic Good</p>
+				
+				<p id="Label">Deity: </p>
+				<p id="Answer">Il-Lashtavar</p>
+				<br>
+				<p id="Label">Size: </p>
+				<p id="Answer">Medium</p>
+				
+				<p id="Label">Year of Birth: </p>
+				<p id="Answer">1050 YK</p>
+				
+				<p id="Label">Height: </p>
+				<p id="Answer">5'6"</p>
+				
+				<p id="Label">Weight: </p>
+				<p id="Answer">125</p>
+				
+				<p id="Label">Hair: </p>
+				<p id="Answer">White</p>
+				
+				<p id="Label">Eyes: </p>
+				<p id="Answer">Blue-Green</p>
+			</div>
+		</div>
+		
+		<!--Stats-->
+		<div class="stats">
+			<div class="header">
+				<h2>Stats</h2>
+			</div>
+			<div class="fields">
+				<div class="stat">
+					<div class="form">
+						<form>
+							STR
+							<input type="number" id="strscore" onkeyup="addMod('str');checkStr();" onblur="addMod('str')">
+						</form>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="form">
+						<form>
+							DEX
+							<input type="number" id="dexscore" onkeyup="addMod('dex');checkDex();" onblur="addMod('dex')">
+						</form>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="form">
+						<form>
+							CON
+							<input type="number" id="conscore" onkeyup="addMod('con')" onblur="addMod('con')">
+						</form>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="form">
+						<form>
+							INT
+							<input type="number" id="intscore" onkeyup="addMod('int');checkInt();" onblur="addMod('int')">
+						</form>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="form">
+						<form>
+							WIS
+							<input type="number" id="wisscore" onkeyup="addMod('wis');checkWis();" onblur="addMod('wis')">
+						</form>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="form">
+						<form>
+							CHA
+							<input type="number" id="chascore" onkeyup="addMod('cha');checkCha();" onblur="addMod('cha')">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Defense-->
+		<div class="header">
+			<h2>Defense</h2>
+		</div>
+		
+		<div class="defense">
+			<div class="form">
+				<form>
+					AC:
+					<input type = "text" name="total">
+				</form>
+			</div>
+			<div class="form">
+				<div class="text">
+					=
+				</div>
+				<div class="text">
+					10
+				</div>
+				<div class="text">
+					+
+				</div>
+				<div class="box">
+					<form class="comp">
+						<input type = "text" id="armormod">
+					</form>
+					<label id="sub">Armor</label>
+				</div>
+				<div class="text">
+					+
+				</div>
+				<div class="box">
+					<form class="comp">
+						<input type = "text" id="shieldmod">
+					</form>
+					<label id="sub">Shield</label>
+				</div>
+				<div class="text">
+					+
+				</div>
+				<div class="box">
+					<form class="comp">
+						<input type = "text" id="dexmod">
+					</form>
+					<label id="sub">Dexterity</label>
+				</div>
+				<div class="text">
+					+
+				</div>
+				<div class="box">
+					<form class="comp">
+						<input type = "text" id="sizemod">
+					</form>
+					<label id="sub">Size</label>
+				</div>
+				<div class="text">
+					+
+				</div>
+				<div class="box">
+					<form class="comp">
+						<input type = "text" id="naturalmod">
+					</form>
+					<label id="sub">Natural</label>
+				</div>
+				<div class="text">
+					+
+				</div>
+				<div class="box">
+					<form class="comp">
+						<input type = "text" id="deflectionmod">
+					</form>
+					<label id="sub">Deflection</label>
+				</div>
+			</div>
+		</div>
+		
+		<div class="saves">
+			<div class="fortSave">
+				<form class="saveTotal">
+					Fortitude:
+					<input type = "text" name="total">
+				</form>
+			</div>
+			<div class="form">
+				<div class="box">
+					<form class="comp">
+						<input type = "text" id="armormod">
+					</form>
+					<label id="sub">Base</label>
+				</div>
+				<div class="text">
+					+
+				</div>
+				<div class="box">
+					<form class="comp">
+						<input type = "text" id="shieldmod">
+					</form>
+					<label id="sub">Ability</label>
+				</div>
+				<div class="text">
+					+
+				</div>
+				<div class="box">
+					<form class="comp">
+						<input type = "text" id="dexmod">
+					</form>
+					<label id="sub">Magic</label>
+				</div>
+				<div class="text">
+					+
+				</div>
+				<div class="box">
+					<form class="comp">
+						<input type = "text" id="sizemod">
+					</form>
+					<label id="sub">Other</label>
+				</div>
+			</div>
+		</div>
+		<div>
+			MORE THINGS TO COME
+		</div>
+		<div class="skills">
+			<div id="skillHeader">
+				<h2>Skills</h2>
+			</div>
+				
+				<form id="skillList">
+					<div id="headers">
+						<div id="skillName">Skill Name</div>
+						<div id="skillSum">Total</div>
+						<div id="abilityMod">Ability</div>
+						<div id="skillRanks">Ranks</div>
+						<div id="skillRacial">Racial</div>
+						<div id="classBonus">Class</div>
+						<div id="skillOther">Other</div>
+					</div>
+					<div id="Acrobaticsskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Acrobatics" onchange="check('Acrobatics')" onclick="plusThree('Acrobatics')">
+							<label class="skill">Acrobatics</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Acrobaticstotal">0</p>
+							<p class="dexSkillMod">0</p>
+							<input type="number" id="Acrobaticsranks" onkeypress="check('Acrobatics')" onblur="check('Acrobatics')">
+							<input type="number" id="Acrobaticsracial" onkeypress="check('Acrobatics')" onblur="check('Acrobatics')">
+							<p id="Acrobaticsskill">0</p>
+							<input type="number" id="Acrobaticsother" onkeypress="check('Acrobatics')" onblur="check('Acrobatics')">
+						</div>
+					</div>
+					<div id="Appraiseskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Appraise" onchange="check('Appraise')" onclick="plusThree('Appraise')">
+							<label class="skill">Appraise</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Appraisetotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Appraiseranks" onkeypress="check('Appraise')" onblur="check('Appraise')">
+							<input type="number" id="Appraiseracial" onkeypress="check('Appraise')" onblur="check('Appraise')">
+							<p id="Appraiseskill">0</p>
+							<input type="number" id="Appraiseother" onkeypress="check('Appraise')" onblur="check('Appraise')">
+						</div>
+					</div>
+					<div id="Bluffskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Bluff" onchange="check('Bluff')" onclick="plusThree('Bluff')">
+							<label class="skill">Bluff</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Blufftotal">0</p>
+							<p class="chaSkillMod">0</p>
+							<input type="number" id="Bluffranks" onkeypress="check('Bluff')" onblur="check('Bluff')">
+							<input type="number" id="Bluffracial" onkeypress="check('Bluff')" onblur="check('Bluff')">
+							<p id="Bluffskill">0</p>
+							<input type="number" id="Bluffother" onkeypress="check('Bluff')" onblur="check('Bluff')">
+						</div>
+					</div>
+					<div id="Climbskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Climb" onchange="check('Climb')" onclick="plusThree('Climb')" onchange="check('Climb')">
+							<label class="skill">Climb</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Climbtotal">0</p>
+							<p class="strSkillMod">0</p>
+							<input type="number" id="Climbranks" onkeypress="check('Climb')" onblur="check('Climb')">
+							<input type="number" id="Climbracial" onkeypress="check('Climb')" onblur="check('Climb')">
+							<p id="Climbskill">0</p>
+							<input type="number" id="Climbother" onkeypress="check('Climb')" onblur="check('Climb')">
+						</div>
+					</div>
+					<div id="Craftskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Craft" onchange="check('Craft')" onclick="plusThree('Craft')">
+							<label class="skill">Craft</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Crafttotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Craftranks" onkeypress="check('Craft')" onblur="check('Craft')">
+							<input type="number" id="Craftracial" onkeypress="check('Craft')" onblur="check('Craft')">
+							<p id="Craftskill">0</p>
+							<input type="number" id="Craftother" onkeypress="check('Climb')" onblur="check('Climb')">
+						</div>
+					</div>
+					<div id="Diplomacyskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Diplomacy" onchange="check('Diplomacy')" onclick="plusThree('Diplomacy')">
+							<label class="skill">Diplomacy</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Diplomacytotal">0</p>
+							<p class="chaSkillMod">0</p>
+							<input type="number" id="Diplomacyranks" onkeypress="check('Diplomacy')" onblur="check('Diplomacy')">
+							<input type="number" id="Diplomacyracial" onkeypress="check('Diplomacy')" onblur="check('Diplomacy')">
+							<p id="Diplomacyskill">0</p>
+							<input type="number" id="Diplomacyother" onkeypress="check('Diplomacy')" onblur="check('Diplomacy')">
+						</div>
+					</div>
+					<div id="DisableDeviceskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="DisableDevice" onchange="check('DisableDevice')" onclick="plusThree('DisableDevice')">
+							<label class="skill">Disable Device</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="DisableDevicetotal">0</p>
+							<p class="dexSkillMod">0</p>
+							<input type="number" id="DisableDeviceranks" onkeypress="check('DisableDevice')" onblur="check('DisableDevice')">
+							<input type="number" id="DisableDeviceracial" onkeypress="check('DisableDevice')" onblur="check('DisableDevice')">
+							<p id="DisableDeviceskill">0</p>
+							<input type="number" id="DisableDeviceother" onkeypress="check('DisableDevice')" onblur="check('DisableDevice')">
+						</div>
+					</div>
+					<div id="Disguiseskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Disguise" onchange="check('Disguise')" onclick="plusThree('Disguise')">
+							<label class="skill">Disguise</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Disguisetotal">0</p>
+							<p class="chaSkillMod">0</p>
+							<input type="number" id="Disguiseranks" onkeypress="check('Disguise')" onblur="check('Disguise')">
+							<input type="number" id="Disguiseracial" onkeypress="check('Disguise')" onblur="check('Disguise')">
+							<p id="Disguiseskill">0</p>
+							<input type="number" id="Disguiseother" onkeypress="check('Disguise')" onblur="check('Disguise')">
+						</div>
+					</div>				
+					<div id="EscapeArtistskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="EscapeArtist" onchange="check('EscapeArtist')" onclick="plusThree('EscapeArtist')">
+							<label class="skill">Escape Artist</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="EscapeArtisttotal">0</p>
+							<p class="dexSkillMod">0</p>
+							<input type="number" id="EscapeArtistranks" onkeypress="check('EscapeArtist')" onblur="check('EscapeArtist')">
+							<input type="number" id="EscapeArtistracial" onkeypress="check('EscapeArtist')" onblur="check('EscapeArtist')">
+							<p id="EscapeArtistskill">0</p>
+							<input type="number" id="EscapeArtistother" onkeypress="check('EscapeArtist')" onblur="check('EscapeArtist')">
+						</div>
+					</div>
+					<div id="Flyskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Fly" onchange="check('Fly')" onclick="plusThree('Fly')">
+							<label class="skill">Fly</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Flytotal">0</p>
+							<p class="dexSkillMod">0</p>
+							<input type="number" id="Flyranks" onkeypress="check('Fly')" onblur="check('Fly')">
+							<input type="number" id="Flyracial" onkeypress="check('Fly')" onblur="check('Fly')">
+							<p id="Flyskill">0</p>
+							<input type="number" id="Flyother" onkeypress="check('Fly')" onblur="check('Fly')">
+						</div>
+					</div>
+					<div id="HandleAnimalskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="HandleAnimal" onchange="check('HandleAnimal')" onclick="plusThree('HandleAnimal')">
+							<label class="skill">Handle Animal</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="HandleAnimaltotal">0</p>
+							<p class="chaSkillMod">0</p>
+							<input type="number" id="HandleAnimalranks" onkeypress="check('HandleAnimal')" onblur="check('HandleAnimal')">
+							<input type="number" id="HandleAnimalracial" onkeypress="check('HandleAnimal')" onblur="check('HandleAnimal')">
+							<p id="HandleAnimalskill">0</p>
+							<input type="number" id="HandleAnimalother" onkeypress="check('HandleAnimal')" onblur="check('HandleAnimal')">
+						</div>
+					</div>
+					<div id="Healskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Heal" onchange="check('Heal')" onclick="plusThree('Heal')">
+							<label class="skill">Heal</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Healtotal">0</p>
+							<p class="wisSkillMod">0</p>
+							<input type="number" id="Healranks" onkeypress="check('Heal')" onblur="check('Heal')">
+							<input type="number" id="Healracial" onkeypress="check('Heal')" onblur="check('Heal')">
+							<p id="Healskill">0</p>
+							<input type="number" id="Healother" onkeypress="check('Heal')" onblur="check('Heal')">
+						</div>
+					</div>
+					<div id="Intimidateskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Intimidate" onchange="check('Intimidate')" onclick="plusThree('Intimidate')">
+							<label class="skill">Intimidate</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Intimidatetotal">0</p>
+							<p class="chaSkillMod">0</p>
+							<input type="number" id="Intimidateranks" onkeypress="check('Intimidate')" onblur="check('Intimidate')">
+							<input type="number" id="Intimidateracial" onkeypress="check('Intimidate')" onblur="check('Intimidate')">
+							<p id="Intimidateskill">0</p>
+							<input type="number" id="Intimidateother" onkeypress="check('Intimidate')" onblur="check('Intimidate')">
+						</div>
+					</div>
+					<div id="Arcanaskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Arcana" onchange="check('Arcana')" onclick="plusThree('Arcana')">
+							<label class="skill">Knowledge (Arcana)</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Arcanatotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Arcanaranks" onkeypress="check('Arcana')" onblur="check('Arcana')">
+							<input type="number" id="Arcanaracial" onkeypress="check('Arcana')" onblur="check('Arcana')">
+							<p id="Arcanaskill">0</p>
+							<input type="number" id="Arcanaother" onkeypress="check('Arcana')" onblur="check('Arcana')">
+						</div>
+					</div>
+					<div id="Dungeoneeringskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Dungeoneering" onchange="check('Dungeoneering')" onclick="plusThree('Dungeoneering')">
+							<label class="skill">Knowledge (Dungeoneering)</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Dungeoneeringtotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Dungeoneeringranks" onkeypress="check('Dungeoneering')" onblur="check('Dungeoneering')">
+							<input type="number" id="Dungeoneeringracial" onkeypress="check('Dungeoneering')" onblur="check('Dungeoneering')">
+							<p id="Dungeoneeringskill">0</p>
+							<input type="number" id="Dungeoneeringother" onkeypress="check('Dungeoneering')" onblur="check('Dungeoneering')">
+						</div>
+					</div>
+					<div id="Engineeringskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Engineering" onchange="check('Engineering')" onclick="plusThree('Engineering')">
+							<label class="skill">Knowledge (Engineering)</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Engineeringtotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Engineeringranks" onkeypress="check('Engineering')" onblur="check('Engineering')">
+							<input type="number" id="Engineeringracial" onkeypress="check('Engineering')" onblur="check('Engineering')">
+							<p id="Engineeringskill">0</p>
+							<input type="number" id="Engineeringother" onkeypress="check('Engineering')" onblur="check('Engineering')">
+						</div>
+					</div>
+					<div id="Geographyskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Geography" onchange="check('Geography')" onclick="plusThree('Geography')">
+							<label class="skill">Knowledge (Geography)</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Geographytotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Geographyranks" onkeypress="check('Geography')" onblur="check('Geography')">
+							<input type="number" id="Geographyracial" onkeypress="check('Geography')" onblur="check('Geography')">
+							<p id="Geographyskill">0</p>
+							<input type="number" id="Geographyother" onkeypress="check('Geography')" onblur="check('Geography')">
+						</div>
+					</div>
+					<div id="Historyskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="History" onchange="check('History')" onclick="plusThree('History')">
+							<label class="skill">Knowledge (History)</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Historytotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Historyranks" onkeypress="check('History')" onblur="check('History')">
+							<input type="number" id="Historyracial" onkeypress="check('History')" onblur="check('History')">
+							<p id="Historyskill">0</p>
+							<input type="number" id="Historyother" onkeypress="check('History')" onblur="check('History')">
+						</div>
+					</div>
+					<div id="Localskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Local" onchange="check('Local')" onclick="plusThree('Local')">
+							<label class="skill">Knowledge (Local)</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Localtotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Localranks" onkeypress="check('Local')" onblur="check('Local')">
+							<input type="number" id="Localracial" onkeypress="check('Local')" onblur="check('Local')">
+							<p id="Localskill">0</p>
+							<input type="number" id="Localother" onkeypress="check('Local')" onblur="check('Local')">
+						</div>
+					</div>
+					<div id="Natureskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Nature" onchange="check('Nature')" onclick="plusThree('Nature')">
+							<label class="skill">Knowledge (Nature)</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Naturetotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Natureranks" onkeypress="check('Nature')" onblur="check('Nature')">
+							<input type="number" id="Natureracial" onkeypress="check('Nature')" onblur="check('Nature')">
+							<p id="Natureskill">0</p>
+							<input type="number" id="Natureother" onkeypress="check('Nature')" onblur="check('Nature')">
+						</div>
+					</div>
+					<div id="Nobilityskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Nobility" onchange="check('Nobility')" onclick="plusThree('Nobility')">
+							<label class="skill">Knowledge (Nobility)</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Nobilitytotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Nobilityranks" onkeypress="check('Nobility')" onblur="check('Nobility')">
+							<input type="number" id="Nobilityracial" onkeypress="check('Nobility')" onblur="check('Nobility')">
+							<p id="Nobilityskill">0</p>
+							<input type="number" id="Nobilityother" onkeypress="check('Nobility')" onblur="check('Nobility')">
+						</div>
+					</div>
+					<div id="Planesskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Planes" onchange="check('Planes')" onclick="plusThree('Planes')">
+							<label class="skill">Knowledge (Planes)</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Planestotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Planesranks" onkeypress="check('Planes')" onblur="check('Planes')">
+							<input type="number" id="Planesracial" onkeypress="check('Planes')" onblur="check('Planes')">
+							<p id="Planesskill">0</p>
+							<input type="number" id="Planesother" onkeypress="check('Planes')" onblur="check('Planes')">
+						</div>
+					</div>
+					<div id="Psionicsskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Psionics" onchange="check('Psionics')" onclick="plusThree('Psionics')">
+							<label class="skill">Knowledge (Psionics)</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Psionicstotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Psionicsranks" onkeypress="check('Psionics')" onblur="check('Psionics')">
+							<input type="number" id="Psionicsracial" onkeypress="check('Psionics')" onblur="check('Psionics')">
+							<p id="Psionicsskill">0</p>
+							<input type="number" id="Psionicsother" onkeypress="check('Psionics')" onblur="check('Psionics')">
+						</div>
+					</div>
+					<div id="Religionskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Religion" onchange="check('Religion')" onclick="plusThree('Religion')">
+							<label class="skill">Knowledge (Religion)</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Religiontotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Religionranks" onkeypress="check('Religion')" onblur="check('Religion')">
+							<input type="number" id="Religionracial" onkeypress="check('Religion')" onblur="check('Religion')">
+							<p id="Religionskill">0</p>
+							<input type="number" id="Religionother" onkeypress="check('Religion')" onblur="check('Religion')">
+						</div>
+					</div>
+					<div id="Linguisticsskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Linguistics" onchange="check('Linguistics')" onclick="plusThree('Linguistics')">
+							<label class="skill">Linguistics</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Linguisticstotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Linguisticsranks" onkeypress="check('Linguistics')" onblur="check('Linguistics')">
+							<input type="number" id="Linguisticsracial" onkeypress="check('Linguistics')" onblur="check('Linguistics')">
+							<p id="Linguisticsskill">0</p>
+							<input type="number" id="Linguisticsother" onkeypress="check('Linguistics')" onblur="check('Linguistics')">
+						</div>
+					</div>
+					<div id="Perceptionskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Perception" onchange="check('Perception')" onclick="plusThree('Perception')">
+							<label class="skill">Perception</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Perceptiontotal">0</p>
+							<p class="wisSkillMod">0</p>
+							<input type="number" id="Perceptionranks" onkeypress="check('Perception')" onblur="check('Perception')">
+							<input type="number" id="Perceptionracial" onkeypress="check('Perception')" onblur="check('Perception')">
+							<p id="Perceptionskill">0</p>
+							<input type="number" id="Perceptionother" onkeypress="check('Perception')" onblur="check('Perception')">
+						</div>
+					</div>
+					<div id="Performskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Perform" onchange="check('Perform')" onclick="plusThree('Perform')">
+							<label class="skill">Perform</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Performtotal">0</p>
+							<p class="chaSkillMod">0</p>
+							<input type="number" id="Performranks" onkeypress="check('Perform')" onblur="check('Perform')">
+							<input type="number" id="Performracial" onkeypress="check('Perform')" onblur="check('Perform')">
+							<p id="Performskill">0</p>
+							<input type="number" id="Performother" onkeypress="check('Perform')" onblur="check('Perform')">
+						</div>
+					</div>
+					<div id="Professionskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Profession" onchange="check('Profession')" onclick="plusThree('Profession')">
+							<label class="skill">Profession</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Professiontotal">0</p>
+							<p class="wisSkillMod">0</p>
+							<input type="number" id="Professionranks" onkeypress="check('Profession')" onblur="check('Profession')">
+							<input type="number" id="Professionracial" onkeypress="check('Profession')" onblur="check('Profession')">
+							<p id="Professionskill">0</p>
+							<input type="number" id="Professionother" onkeypress="check('Profession')" onblur="check('Profession')">
+						</div>
+					</div>
+					<div id="Rideskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Ride" onchange="check('Ride')" onclick="plusThree('Ride')">
+							<label class="skill">Ride</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Ridetotal">0</p>
+							<p class="dexSkillMod">0</p>
+							<input type="number" id="Rideranks" onkeypress="check('Ride')" onblur="check('Ride')">
+							<input type="number" id="Rideracial" onkeypress="check('Ride')" onblur="check('Ride')">
+							<p id="Rideskill">0</p>
+							<input type="number" id="Rideother" onkeypress="check('Ride')" onblur="check('Ride')">
+						</div>
+					</div>
+					<div id="SenseMotiveskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="SenseMotive" onchange="check('SenseMotive')" onclick="plusThree('SenseMotive')">
+							<label class="skill">Sense Motive</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="SenseMotivetotal">0</p>
+							<p class="wisSkillMod">0</p>
+							<input type="number" id="SenseMotiveranks" onkeypress="check('SenseMotive')" onblur="check('SenseMotive')">
+							<input type="number" id="SenseMotiveracial" onkeypress="check('SenseMotive')" onblur="check('SenseMotive')">
+							<p id="SenseMotiveskill">0</p>
+							<input type="number" id="SenseMotiveother" onkeypress="check('SenseMotive')" onblur="check('SenseMotive')">
+						</div>
+					</div>
+					<div id="SOHskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="SOH" onchange="check('SOH')" onclick="plusThree('SOH')">
+							<label class="skill">Sleight of Hand</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="SOHtotal">0</p>
+							<p class="dexSkillMod">0</p>
+							<input type="number" id="SOHranks" onkeypress="check('SOH')" onblur="check('SOH')">
+							<input type="number" id="SOHracial" onkeypress="check('SOH')" onblur="check('SOH')">
+							<p id="SOHskill">0</p>
+							<input type="number" id="SOHother" onkeypress="check('SOH')" onblur="check('SOH')">
+						</div>
+					</div>
+					<div id="Spellcraftskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Spellcraft" onchange="check('Spellcraft')" onclick="plusThree('Spellcraft')">
+							<label class="skill">Spellcraft</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Spellcrafttotal">0</p>
+							<p class="intSkillMod">0</p>
+							<input type="number" id="Spellcraftranks" onkeypress="check('Spellcraft')" onblur="check('Spellcraft')">
+							<input type="number" id="Spellcraftracial" onkeypress="check('Spellcraft')" onblur="check('Spellcraft')">
+							<p id="Spellcraftskill">0</p>
+							<input type="number" id="Spellcraftother" onkeypress="check('Spellcraft')" onblur="check('Spellcraft')">
+						</div>
+					</div>
+					<div id="Stealthskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Stealth" onchange="check('Stealth')" onclick="plusThree('Stealth')">
+							<label class="skill">Stealth</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Stealthtotal">0</p>
+							<p class="dexSkillMod">0</p>
+							<input type="number" id="Stealthranks" onkeypress="check('Stealth')" onblur="check('Stealth')">
+							<input type="number" id="Stealthracial" onkeypress="check('Stealth')" onblur="check('Stealth')">
+							<p id="Stealthskill">0</p>
+							<input type="number" id="Stealthother" onkeypress="check('Stealth')" onblur="check('Stealth')">
+						</div>
+					</div>
+					<div id="Survivalskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Survival" onchange="check('Survival')" onclick="plusThree('Survival')">
+							<label class="skill">Survival</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Survivaltotal">0</p>
+							<p class="wisSkillMod">0</p>
+							<input type="number" id="Survivalranks" onkeypress="check('Survival')" onblur="check('Survival')">
+							<input type="number" id="Survivalracial" onkeypress="check('Survival')" onblur="check('Survival')">
+							<p id="Survivalskill">0</p>
+							<input type="number" id="Survivalother" onkeypress="check('Survival')" onblur="check('Survival')">
+						</div>
+					</div>
+					<div id="Swimskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="Swim" onchange="check('Swim')" onclick="plusThree('Swim')">
+							<label class="skill">Swim</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="Swimtotal">0</p>
+							<p class="strSkillMod">0</p>
+							<input type="number" id="Swimranks" onkeypress="check('Swim')" onblur="check('Swim')">
+							<input type="number" id="Swimracial" onkeypress="check('Swim')" onblur="check('Swim')">
+							<p id="Swimskill">0</p>
+							<input type="number" id="Swimother" onkeypress="check('Swim')" onblur="check('Swim')">
+						</div>
+					</div>
+					<div id="UMDskillbar">
+						<div class="skillLabel">
+							<input type="checkbox" id="UMD" onchange="check('UMD')" onclick="plusThree('UMD')">
+							<label class="skill">Use Magic Device</label>
+						</div>
+						<div class="skillBonuses">
+							<p id="UMDtotal">0</p>
+							<p class="chaSkillMod">0</p>
+							<input type="number" id="UMDranks" onkeypress="check('UMD')" onblur="check('UMD')">
+							<input type="number" id="UMDracial" onkeypress="check('UMD')" onblur="check('UMD')">
+							<p id="UMDskill">0</p>
+							<input type="number" id="UMDother" onkeypress="check('UMD')" onblur="check('UMD')">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
