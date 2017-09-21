@@ -34,27 +34,42 @@ nav
 	font-size: 30px;
 }
 
-.textbox
+h1
 {
+	font-size: 40px;
 	text-align: center;
-	font-size: 30px;
 }
 
-.previews
+.cj
+{
+	text-align: center;
+	margin-top: -3%;
+}
+
+.holder
 {
 	display: flex;
 	justify-content: center;
 }
-div[name$="Preview"]
+
+article
 {
+	width: 50vw;
 	background-color: #ffc266;
 	text-align: center;
-	width: 32.5%;
 	border: 1px solid black;
 	border-radius: 10%;
-	margin: 10px;
-	padding-bottom: 15px;
-/*	display: inline-block;*/
+}
+
+.about, .more
+{
+	display: block;
+}
+
+ul
+{
+	display: inline-block;
+	text-align: left;
 }
 
 footer
@@ -63,18 +78,4 @@ footer
 	text-align: center;
 	border-top: 1px solid black;
 	font-size: 10px;
-}
-
-
-@media only screen and (max-width: 950px)
-{
-	.previews
-	{
-		display: initial;
-	}
-	div[name$="Preview"]
-	{
-		width: 70vw;
-		display: block;
-	}
 }
