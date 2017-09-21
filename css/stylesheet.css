@@ -1,4 +1,47 @@
-body{
-	color: #eee;
-	background-color: #74AFAD;
+body
+{
+	color: #4d2e00;
+	background-color: #ffe7c3;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+/*	background: linear-gradient(cyan);*/
+}
+
+nav
+{
+	text-align: center;
+	border-bottom: 1px solid black;
+	font-size: 30px;
+}
+
+.textbox
+{
+	text-align: center;
+	font-size: 40px;
+}
+
+.previews
+{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 50%;
+}
+div[name$="Preview"]
+{
+	background-color: #ffc266;
+	text-align: center;
+	width: 32.5%;
+	border: 1px solid black;
+	border-radius: 10%;
+	margin: 10px;
+	padding-bottom: 15px;
+/*	display: inline-block;*/
+}
+
+footer
+{
+	margin-top: 2%;
+	text-align: center;
+	border-top: 1px solid black;
+	font-size: 10px;
 }
