@@ -45,7 +45,7 @@ nav
 	display: flex;
 	justify-content: center;
 }
-div[name$="Preview"]
+div[id$="Preview"]
 {
 	background-color: #ffc266;
 	text-align: center;
