@@ -11,7 +11,7 @@
 		<nav>
 			<a href="pages/cj.php">CJ</a>
 			<a href="pages/frankieportfolio.php">Frankie</a>
-			<a href="#">Jien</a>
+			<a href="pages/jien.php">Jien</a>
 
 		</nav>
 <div class ="textbox">
